@@ -55,7 +55,6 @@ public class HashtagsFragment extends Fragment {
         client = new Client(requireContext()).setProject(getString(R.string.APPWRITE_PROJECT_ID));
         appViewModel = new ViewModelProvider(requireActivity()).get(AppViewModel.class);
 
-        // Configurar RecyclerView
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
         adapter = new PostsAdapter(client, "", appViewModel,
                 (resId, bundle) -> navController.navigate(resId, bundle),
@@ -63,7 +62,6 @@ public class HashtagsFragment extends Fragment {
         );
         recyclerView.setAdapter(adapter);
 
-        // Obtener el hashtag del argumento
         if (getArguments() != null) {
             hashtag = getArguments().getString("hashtag", "");
         }

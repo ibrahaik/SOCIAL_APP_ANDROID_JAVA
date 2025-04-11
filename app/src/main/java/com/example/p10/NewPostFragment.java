@@ -53,8 +53,7 @@ import io.appwrite.services.Account;
 import io.appwrite.services.Databases;
 import io.appwrite.services.Storage;
 
-// Asegúrate de tener la clase Hashtags en el paquete com.example.socialapp
-import com.example.p10.Hashtags;
+
 
 public class NewPostFragment extends Fragment {
     Button publishButton;

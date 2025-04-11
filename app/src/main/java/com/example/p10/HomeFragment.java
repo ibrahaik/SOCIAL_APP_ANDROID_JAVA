@@ -1,9 +1,13 @@
 package com.example.p10;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -179,7 +183,19 @@ public class HomeFragment extends Fragment {
                         .into(holder.authorPhotoImageView);
             }
             holder.authorTextView.setText(post.get("author").toString());
-            holder.contentTextView.setText(post.get("content").toString());
+            // Mostrar contenido con hashtags en azul (fake visual)
+            String mensaje = post.get("content") != null ? post.get("content").toString() : "";
+            SpannableString spannable = new SpannableString(mensaje);
+            String[] palabras = mensaje.split(" ");
+            for (String palabra : palabras) {
+                if (palabra.startsWith("#")) {
+                    int start = mensaje.indexOf(palabra);
+                    int end = start + palabra.length();
+                    spannable.setSpan(new ForegroundColorSpan(Color.BLUE), start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                }
+            }
+            holder.contentTextView.setText(spannable);
+
 
             // Gestión de likes (código existente)
             List<String> likes = (List<String>) post.get("likes");
