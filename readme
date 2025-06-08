@@ -1,0 +1,27 @@
+# Social App - Android (Java)
+
+Este proyecto es una aplicación móvil tipo red social desarrollada en Java para Android. Permite a los usuarios registrarse, iniciar sesión, crear publicaciones con contenido multimedia (imágenes, videos o audio), dar "me gusta", utilizar hashtags y ver perfiles de usuario.
+
+## Tecnologías utilizadas
+
+- **Java**: Lenguaje principal de programación.
+- **Android Jetpack Components**: ViewModel, LiveData, Navigation.
+- **Appwrite**: Backend as a Service para autenticación, base de datos y almacenamiento de archivos.
+- **Glide**: Carga y gestión eficiente de imágenes.
+- **Material Components**: Diseño moderno con Material Design.
+- **Gradle**: Sistema de compilación.
+- **XML**: Definición de interfaces de usuario (layouts).
+- **MediaController**: Reproducción de contenido multimedia.
+- **Room (opcional si se usa)**: Almacenamiento local.
+
+## Funcionalidades principales
+
+- Registro e inicio de sesión de usuarios.
+- Creación y visualización de publicaciones con contenido multimedia.
+- Manejo de "likes".
+- Soporte para hashtags clicables y filtrado por etiquetas.
+- Eliminación y restauración de publicaciones.
+- Navegación entre fragmentos: Home, Perfil, Nueva Publicación, Hashtags, Media.
+- Integración con cámara, galería y grabadora de audio.
+
+Este proyecto está diseñado con enfoque educativo y modular para facilitar su comprensión, expansión y mantenimiento.
